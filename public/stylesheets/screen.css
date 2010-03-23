@@ -1,0 +1,21 @@
+body {
+  margin: 2em;
+  background: #eee;
+  color: #333;
+  font: 1.2em Georgia, Times, "Times New Roman", serif;
+}
+
+header,
+section,
+footer {
+  border-bottom: 1px solid #ccc;
+}
+
+#new-post {
+  background: #fff;
+  padding: 1em;
+}
+
+label {
+  display: block;
+}

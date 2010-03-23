@@ -1,0 +1,26 @@
+<div id="new-post">
+  <% form_for :post, new_post_path do %>
+    <%= label :post, :title %>
+    <%= text_field :post, :title %>
+    
+    <%= label :post, :content %>
+    <%= text_area :post, :content, :rows => 10 %>
+    
+    <%= hidden_field :post, :user_id, :value => 1 %>
+    <%= hidden_field :post, :feather, :value => "text" %>
+    
+    <div class="submit">
+      <%= submit_tag "Publish", :class => "submit" %>
+    </div>
+  <% end %>
+</div>
+
+<% @posts.each do |post| %>
+  <div class="post-li">
+    <span class="type"><%= post.feather.humanize %>:</span> <%= link_to post.title, post %>
+  </div>
+<% end %>
+
+<% if @posts.length < 1 %>
+  <p><em>Sorry, no posts could be found.</em></p>
+<% end %>
