@@ -1,0 +1,19 @@
+<div id="new-post">
+  <%= link_to "Create a new post", "#", :class => "show" %>
+  
+  <% form_for :post, new_post_path, :html => { :style => "display:none;" } do %>
+    <%= label :post, :title %>
+    <%= text_field :post, :title %>
+    
+    <%= label :post, :content %>
+    <%= text_area :post, :content, :rows => 10 %>
+    
+    <%= hidden_field :post, :user_id, :value => 1 %>
+    <%= hidden_field :post, :feather, :value => "text" %>
+    
+    <div class="commit">
+      <%= submit_tag "Publish", :class => "publish" %> or
+      <%= link_to "Cancel", "#", :class => "hide" %>
+    </div>
+  <% end %>
+</div>

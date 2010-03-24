@@ -12,10 +12,24 @@ footer {
   padding: 1em;
 }
 
+a {
+  color: #000;
+  background: #ff9;
+}
+
 /* Header */
 
 header h1 {
   margin: 0;
+}
+
+/* New Post */
+
+#new-post {
+  background: #ffc;
+  padding: 1em;
+  border: 1px solid #dd9;
+  border-radius: 0.5em;
 }
 
 /* Section */
@@ -24,14 +38,26 @@ section {
   background: #fff;
   border: 1px solid #ccc;
   border-radius: 0.5em;
+  margin-bottom: 1em;
 }
 
-#new-post {
-  background: #ffc;
-  padding: 1em;
-  margin-bottom: 1em;
-  border: 1px solid #dd9;
-  border-radius: 0.5em;
+h2 {
+  margin: 0;
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid #000;
+}
+
+/* Post LI */
+
+.post-li {
+  margin-bottom: 0.2em;
+}
+
+.post-li .type {
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+  color: #999;
 }
 
 /* Footer  */
