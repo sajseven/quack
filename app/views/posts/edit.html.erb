@@ -4,7 +4,6 @@
 
 <% form_for @post do %>
   <%= render :partial => "feathers/#{@post.feather}/form" %>
-  <%= hidden_field :post, :user_id, :value => 1 %>
   
   <div class="commit">
     <%= submit_tag "Update #{@post.feather}", :class => "update" %> or

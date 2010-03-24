@@ -6,13 +6,6 @@ body {
   font: 1.2em Helvetica, Arial, sans-serif;
 }
 
-header,
-#action-bar,
-section,
-footer {
-  padding: 1em 3em;
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-family: Palatino, Garamond, Georgia, Times, "Times New Roman", serif;
   font-style: italic;
@@ -21,6 +14,17 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: #000;
   background: #ff9;
+}
+
+a:hover {
+  background: #ff6;
+}
+
+header,
+#action-bar,
+section,
+footer {
+  padding: 1em 3em;
 }
 
 /* Header */
@@ -72,9 +76,15 @@ header h1 strong {
   border-radius: 0.3em;
 }
 
+#action-bar li a:hover {
+  background: #ff6;
+  color: #333;
+}
+
 #action-bar li.ui-state-active a {
   background: none;
-  color: #000;
+  color: #333;
+  border-color: #996;
 }
 
 .ui-tabs-hide {
@@ -108,6 +118,17 @@ section {
 
 .post-li .type {
   margin-right: 1em;
+  color: #999;
+}
+
+.post-li .date {
+  margin-left: 1em;
+  color: #999;
+}
+
+/* Post */
+
+.meta {
   color: #999;
 }
 

@@ -5,6 +5,7 @@
 <% @posts.each do |post| %>
   <div class="post-li">
     <span class="type"><%= post.feather.humanize %>:</span> <%= link_to post.title || post.description, post %>
+    <span class="date"><%= post.created_at.strftime "%h %d, %Y" %></span>
   </div>
 <% end %>
 
