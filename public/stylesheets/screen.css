@@ -2,20 +2,41 @@ body {
   margin: 2em;
   background: #eee;
   color: #333;
-  font: 1.2em Georgia, Times, "Times New Roman", serif;
+  /* font: 1.2em Georgia, Times, "Times New Roman", serif; */
+  font: 1.2em Helvetica, Arial, sans-serif;
 }
 
 header,
 section,
 footer {
-  border-bottom: 1px solid #ccc;
-}
-
-#new-post {
-  background: #fff;
   padding: 1em;
 }
 
-label {
-  display: block;
+/* Header */
+
+header h1 {
+  margin: 0;
+}
+
+/* Section */
+
+section {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 0.5em;
+}
+
+#new-post {
+  background: #ffc;
+  padding: 1em;
+  margin-bottom: 1em;
+  border: 1px solid #dd9;
+  border-radius: 0.5em;
+}
+
+/* Footer  */
+
+footer {
+  border-bottom: 0;
+  color: #999;
 }

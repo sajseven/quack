@@ -1,0 +1,87 @@
+label {
+  display: block;
+  margin-top: 0.4em;
+  font-size: 0.8em;
+  color: #666;
+}
+
+label.for-checkbox,
+label.for-radio {
+  display: inline-block;
+  position: relative;
+  top: 1px;
+  color: #333;
+}
+
+input[type=text] {
+  width: 99.5%;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+input[type=text].large {
+  font-size: 1.8em;
+}
+
+select {
+  margin-top: 0.2em;
+  font-size: 1em;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  margin-left: 2em;
+}
+
+div.commit {
+  margin-top: 1em;
+  padding: 1em 0;
+  border-top: 3px double #ccc;
+  color: #666;
+  font-size: 0.8em;
+}
+
+input[type=submit] {
+  height: 35px;
+  margin-right: 0.4em;
+  border: none;
+  padding: 0.6em 1.8em;
+  background: url(../images/juni/buttons/grey-left.png) left no-repeat,
+    url(../images/juni/buttons/grey-right.png) right no-repeat,
+    url(../images/juni/buttons/center.png) center repeat-x;
+  font-size: 1em;
+  font-weight: bold;
+  color: #444;
+}
+
+input[type=submit]:active {
+  background: url(../images/juni/buttons/grey-active-left.png) left no-repeat,
+    url(../images/juni/buttons/grey-active-right.png) right no-repeat,
+    url(../images/juni/buttons/active-center.png) center repeat-x;
+}
+
+input[type=submit].white {
+  background: url(../images/juni/buttons/white-left.png) left no-repeat,
+    url(../images/juni/buttons/white-right.png) right no-repeat,
+    url(../images/juni/buttons/center.png) center repeat-x;
+}
+
+input[type=submit].white:active {
+  background: url(../images/juni/buttons/white-active-left.png) left no-repeat,
+    url(../images/juni/buttons/white-active-right.png) right no-repeat,
+    url(../images/juni/buttons/active-center.png) center repeat-x;
+}
+
+input[type=submit]:hover { color: #000; }
+input[type=submit].positiv:hover { color: #090; }
+input[type=submit].negativ:hover { color: #900; }
+
+div.commit a { color: #333; padding: 0.2em; }
+
+div.commit a:hover { color: #666; }
+div.commit a.positiv:hover { color: #090; }
+div.commit a.negativ:hover { color: #900; }
+
+div.commit a:active { background: #666; color: #fff; }
+div.commit a.positiv:active { background: #090; color: #fff; }
+div.commit a.negativ:active { background: #900; color: #fff; }

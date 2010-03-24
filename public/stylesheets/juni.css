@@ -1,0 +1,46 @@
+label {
+  display: block;
+  font-size: 0.8em;
+  color: #666;
+  margin-top: 0.5em;
+  margin-left: 0.2em;
+}
+
+input[type=text] {
+  font-size: 1.2em;
+  font-weight: bold;
+  width: 99%;
+}
+
+textarea {
+  width: 99%;
+  padding: 0.2em;
+  font-size: 0.8em;
+}
+
+input[type=submit] {
+  border: none;
+  outline: none;
+  padding: 0.5em 1.5em;
+  font-size: 0.8em;
+}
+
+input[type=submit].publish {
+  background: #36f;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 95%, from(#36f), to(#039));
+  color: #fff;
+  border: 1px solid #009;
+  border-radius: 1.5em;
+}
+
+input[type=submit].publish:active {
+  background: #039;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 95%, from(#039), to(#36f));
+  color: #ace;
+}
+
+.commit {
+  margin-top: 1em;
+  color: #666;
+  font-size: 0.8em;
+}
