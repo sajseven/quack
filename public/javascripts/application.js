@@ -16,4 +16,7 @@ $(function() {
   // New posts toggle
   commit_toggle_set('new-post');
   
+  // New posts tabs
+  $("#new-post").tabs({ panelTemplate: "<form></form>" });
+  
 });

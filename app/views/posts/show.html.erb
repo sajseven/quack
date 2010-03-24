@@ -1,8 +1,6 @@
-<% content_for :title do %>
-  <h2><%= @post.title %></h2>
-<% end %>
+<%= render :partial => "feathers/#{@post.feather}/admin", :locals => { :post => @post } %>
 
-<%= raw textilize @post.content %>
+URL: <%= link_to @post.url if @post.url %>
 
 <% content_for :actions do %>
   <%= link_to "Back to all posts", posts_path %> |

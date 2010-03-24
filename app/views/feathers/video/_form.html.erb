@@ -1,0 +1,10 @@
+<%= label :post, :content, "Video embed code" %>
+<%= text_area :post, :content, :rows => 3 %>
+
+<%= label :post, :description %>
+<%= text_area :post, :description, :rows => 5 %>
+
+<%= label :post, :url, "Source URL" %>
+<%= text_field :post, :url %>
+
+<%= hidden_field :post, :feather, :value => "video" %>

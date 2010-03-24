@@ -3,12 +3,13 @@
 <html>
   <head>
     <title>Quack</title>
-    <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js", "rails", "application" %>
+    <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js",
+      "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js", "rails", "application" %>
     <%= stylesheet_link_tag "screen", "juni" %>
   </head>
   <body>
     <header>
-      <h1>Quack: <strong><%= Config.site.name %></strong></h1>
+      <h1>Quack: <strong><%= Config.name %></strong></h1>
     </header>
     
     <div id="action-bar">

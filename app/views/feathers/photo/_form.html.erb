@@ -1,0 +1,10 @@
+<%= label :post, :content, "Image URL" %>
+<%= text_field :post, :content %>
+
+<%= label :post, :description %>
+<%= text_area :post, :description, :rows => 5 %>
+
+<%= label :post, :url, "Source URL" %>
+<%= text_field :post, :url %>
+
+<%= hidden_field :post, :feather, :value => "photo" %>

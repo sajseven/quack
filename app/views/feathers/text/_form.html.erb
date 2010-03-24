@@ -1,0 +1,10 @@
+<%= label :post, :title %>
+<%= text_field :post, :title %>
+
+<%= label :post, :content %>
+<%= text_area :post, :content, :rows => 10 %>
+
+<%= label :post, :url, "Source URL" %>
+<%= text_field :post, :url %>
+
+<%= hidden_field :post, :feather, :value => "quote" %>

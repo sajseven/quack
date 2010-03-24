@@ -49,6 +49,38 @@ header h1 strong {
   color: #cc9;
 }
 
+#action-bar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 1em;
+}
+
+#action-bar li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+#action-bar li a {
+  padding: 0.2em 0.5em;
+  background: #fff;
+  border: 1px solid #dd9;
+  text-decoration: none;
+  color: #666;
+  font-weight: bold;
+  border-radius: 0.3em;
+}
+
+#action-bar li.ui-state-active a {
+  background: none;
+  color: #000;
+}
+
+.ui-tabs-hide {
+  display: none;
+}
+
 /* Page title */
 
 #page-title {
