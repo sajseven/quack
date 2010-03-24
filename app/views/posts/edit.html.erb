@@ -1,0 +1,17 @@
+<% content_for :title do %>
+  <h2>Editing post</h2>
+<% end %>
+
+<% form_for @post do %>
+  <%= render :partial => "feathers/#{@post.feather}/form" %>
+  <%= hidden_field :post, :user_id, :value => 1 %>
+  
+  <div class="commit">
+    <%= submit_tag "Update #{@post.feather}", :class => "update" %> or
+    <%= link_to "Cancel", @post %>
+  </div>
+<% end %>
+
+<% content_for :actions do %>
+  <%= link_to "Delete post", @post, :method => "delete", :confirm => "Are you sure?", :class => "delete" %>
+<% end %>

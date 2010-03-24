@@ -26,15 +26,25 @@ input[type=submit] {
   border: none;
   outline: none;
   padding: 0.5em 1.5em;
+  border: 1px solid #ccc;
+  border-radius: 1.5em;
+  text-shadow: #fff 1px 1px 1px;
+  background: #eee;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 95%, from(#eee), to(#ccc));
+  color: #333;
+}
+
+input[type=submit]:active {
+  background: #ccc;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 95%, from(#ccc), to(#eee));
 }
 
 input[type=submit].publish {
   background: #36f;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 95%, from(#36f), to(#039));
-  color: #fff;
-  border: 1px solid #039;
-  border-radius: 1.5em;
   text-shadow: #039 -1px -1px 1px;
+  color: #fff;
+  border-color: #039;
 }
 
 input[type=submit].publish:active {

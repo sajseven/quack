@@ -1,14 +1,11 @@
 <div id="new-post" style="display:none;">
-  
   <ul>
-    Type:
     <% Config.feathers.each do |feather| %>
       <li><a href="#new-post-<%= feather %>"><%= feather.humanize %></a></li>
     <% end %>
   </ul>
   
   <% Config.feathers.each do |feather| %>
-
     <% form_for :post, new_post_path, :html => { :id => "new-post-#{feather}" } do %>
       <%= render :partial => "feathers/#{feather}/form" %>
       <%= hidden_field :post, :user_id, :value => 1 %>
@@ -18,7 +15,5 @@
         <%= link_to "Cancel", "#", :class => "hide" %>
       </div>
     <% end %>
-  
   <% end %>
-  
 </div>
