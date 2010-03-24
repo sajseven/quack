@@ -1,4 +1,6 @@
-<h2>Listing all posts</h2>
+<% content_for :title do %>
+  <h2>Listing all pages</h2>
+<% end %>
 
 <% @posts.each do |post| %>
   <div class="post-li">
@@ -8,4 +10,11 @@
 
 <% if @posts.length < 1 %>
   <p><em>Sorry, no posts could be found.</em></p>
+<% end %>
+
+<% content_for :actions do %>
+  <div id="links">
+    <%= link_to "Create new post", "#", :id => "new-post-show" %>
+  </div>
+  <%= render :partial => "shared/new_post" %>
 <% end %>

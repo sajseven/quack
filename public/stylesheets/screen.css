@@ -1,5 +1,5 @@
 body {
-  margin: 2em;
+  margin: 0;
   background: #eee;
   color: #333;
   /* font: 1.2em Georgia, Times, "Times New Roman", serif; */
@@ -7,9 +7,15 @@ body {
 }
 
 header,
+#action-bar,
 section,
 footer {
-  padding: 1em;
+  padding: 1em 3em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Palatino, Garamond, Georgia, Times, "Times New Roman", serif;
+  font-style: italic;
 }
 
 a {
@@ -19,32 +25,47 @@ a {
 
 /* Header */
 
-header h1 {
-  margin: 0;
+header {
+  background: #333;
+  color: #eee;
+  border-bottom: 1px solid #111;
 }
 
-/* New Post */
+header h1 {
+  margin: 0;
+  color: #999;
+  font-weight: normal;
+}
 
-#new-post {
+header h1 strong {
+  color: #eee;
+}
+
+/* Action bar */
+
+#action-bar {
   background: #ffc;
-  padding: 1em;
-  border: 1px solid #dd9;
-  border-radius: 0.5em;
+  border-bottom: 1px solid #dd9;
+  color: #cc9;
+}
+
+/* Page title */
+
+#page-title {
+  padding: 1em 3em;
+  background: #ffe;
+  border-bottom: 1px solid #eec;
+}
+
+#page-title h2 {
+  margin: 0;
 }
 
 /* Section */
 
 section {
   background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 0.5em;
-  margin-bottom: 1em;
-}
-
-h2 {
-  margin: 0;
-  margin-bottom: 0.5em;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #ccc;
 }
 
 /* Post LI */
@@ -54,9 +75,7 @@ h2 {
 }
 
 .post-li .type {
-  display: inline-block;
-  width: 100px;
-  text-align: right;
+  margin-right: 1em;
   color: #999;
 }
 

@@ -6,6 +6,10 @@ label {
   margin-left: 0.2em;
 }
 
+input {
+  font: bold 0.8em Helvetica, Arial, sans-serif;
+}
+
 input[type=text] {
   font-size: 1.2em;
   font-weight: bold;
@@ -15,32 +19,35 @@ input[type=text] {
 textarea {
   width: 99%;
   padding: 0.2em;
-  font-size: 0.8em;
+  font: 0.8em Menlo, Monaco, Courier, "Courier New", monospace;
 }
 
 input[type=submit] {
   border: none;
   outline: none;
   padding: 0.5em 1.5em;
-  font-size: 0.8em;
 }
 
 input[type=submit].publish {
   background: #36f;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 95%, from(#36f), to(#039));
   color: #fff;
-  border: 1px solid #009;
+  border: 1px solid #039;
   border-radius: 1.5em;
+  text-shadow: #039 -1px -1px 1px;
 }
 
 input[type=submit].publish:active {
   background: #039;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 95%, from(#039), to(#36f));
-  color: #ace;
 }
 
 .commit {
   margin-top: 1em;
   color: #666;
   font-size: 0.8em;
+}
+
+a.delete {
+  color: #a00;
 }

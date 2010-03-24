@@ -1,15 +1,19 @@
+function commit_toggle(clicked, hidden, shown) {
+  $(clicked).click(function() {
+    $(hidden).slideUp();
+    $(shown).slideDown();
+    return false;
+  });
+}
+
+function commit_toggle_set(name) {
+  commit_toggle(('a#'+name+'-show'), '#action-bar #links', ('#'+name));
+  commit_toggle(('#'+name+' a.hide'), ('#'+name), '#action-bar #links');
+}
+
 $(function() {
   
-  $("#new-post a.show").click(function() {
-    $(this).slideUp(200);
-    $("#new-post form").delay(200).slideDown(500);
-    return false;
-  });
-  
-  $("#new-post a.hide").click(function() {
-    $("#new-post form").slideUp(500);
-    $("#new-post a.show").delay(500).slideDown(200);
-    return false;
-  });
+  // New posts toggle
+  commit_toggle_set('new-post');
   
 });

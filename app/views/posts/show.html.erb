@@ -1,3 +1,11 @@
-<h1><%= @post.title %></h1>
+<% content_for :title do %>
+  <h2><%= @post.title %></h2>
+<% end %>
 
 <%= raw textilize @post.content %>
+
+<% content_for :actions do %>
+  <%= link_to "Back to all posts", posts_path %> |
+  <%= link_to "Edit post", edit_post_path(@post) %> |
+  <%= link_to "Delete post", @post, :method => "delete", :confirm => "Are you sure?", :class => "delete" %>
+<% end %>
