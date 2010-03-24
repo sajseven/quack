@@ -1,19 +1,20 @@
 Quack::Application.routes.draw do |map|
-  resources :posts
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
+  match 'archive/:year/:month/:id' => 'reveal#show'
 
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
+  match 'style.css' => 'reveal#css', :as => :css
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+  resources :posts
 
   # Sample resource route with options:
   #   resources :products do
@@ -51,7 +52,7 @@ Quack::Application.routes.draw do |map|
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => "welcome#index"
-  root :to => "posts#index"
+  root :to => "reveal#index"
 
   # See how all your routes lay out with "rake routes"
 

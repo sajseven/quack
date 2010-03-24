@@ -1,0 +1,151 @@
+body {
+  background: #fff;
+  color: #333;
+  font: 1.5em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 2em;
+}
+
+a {
+  color: #000;
+  background: #eee;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+}
+
+a:hover {
+  background: #ff0;
+}
+
+/* Header */
+
+header {
+  padding-bottom: 1em;
+  border-bottom: 5px solid #ccc;
+  margin-bottom: 1em;
+}
+
+header h1 {
+  margin: 0;
+  color: #000;
+}
+
+header p {
+  margin: 0;
+  color: #666;
+}
+
+/* Section */
+
+section {}
+
+/* Article */
+
+article {
+  padding-bottom: 1em;
+  border-bottom: 5px solid #ccc;
+  margin-bottom: 1em;
+}
+
+/* Quote */
+
+article .quote {}
+
+article .quote .words {
+  font-size: 1.5em;
+  margin-left: 2em;
+}
+
+article .quote .mark {
+  float: left;
+  font-size: 4.5em;
+  line-height: 0em;
+  position: relative;
+  top: 0.4em;
+  color: #999;
+  margin-right: 0.2em;
+}
+
+article .quote .quoted {
+  color: #666;
+  font-style: italic;
+  margin-top: 0.5em;
+  margin-left: 3em;
+}
+
+/* Text */
+
+article .text {}
+
+article .text .mark {
+  float: left;
+  font-size: 2em;
+  line-height: 0em;
+  position: relative;
+  top: 0.4em;
+  color: #999;
+  margin-right: 0.2em;
+}
+
+article .text h2 {
+  margin: 0;
+  margin-left: 2em;
+}
+
+article .text .words {
+  margin-left: 3em;
+}
+
+/* Video */
+
+article .video {}
+
+article .video .mark {
+  float: left;
+  font-size: 2em;
+  line-height: 0em;
+  position: relative;
+  top: 0.4em;
+  color: #999;
+  margin-right: 0.2em;
+}
+
+article .video object {
+  font-size: 1em;
+  margin-left: 0.75em;
+  padding: 0;
+}
+
+article .video .words {
+  margin-left: 3em;
+}
+
+/* Photo */
+
+article .photo {}
+
+article .photo .mark {
+  float: left;
+  font-size: 2em;
+  line-height: 0em;
+  position: relative;
+  top: 0.4em;
+  color: #999;
+  margin-right: 0.2em;
+}
+
+article .photo img {
+  font-size: 1em;
+  margin-left: 0.9em;
+  padding: 0;
+}
+
+article .photo .words {
+  margin-left: 3em;
+}
+
+/* Footer */
+
+footer {
+  margin-top: 1em;
+  color: #999;
+}

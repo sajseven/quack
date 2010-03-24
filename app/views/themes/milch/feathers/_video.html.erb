@@ -1,0 +1,10 @@
+<article>
+  <div class="video">
+    <div class="mark">&nbsp;&otimes;</div>
+    <%= raw post.content %>
+    <div class="words">
+      <%= raw textilize post.description %>
+      <p>(<%= link_to "permalink", post %>)</p>
+    </div>
+  </div>
+</article>
