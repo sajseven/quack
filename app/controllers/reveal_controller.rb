@@ -4,6 +4,11 @@ class RevealController < ApplicationController
     render :layout => "../themes/#{Config.theme}/layout", :template => "themes/#{Config.theme}/index"
   end
   
+  def show
+    @post = Post.find params[:id]
+    render :layout => "../themes/#{Config.theme}/layout", :template => "themes/#{Config.theme}/show"
+  end
+  
   def css
     headers["Content-Type"] = "text/css; charset=utf-8"
     render :inline => get_file_as_string("app/views/themes/#{Config.theme}/style.css")

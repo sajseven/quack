@@ -4,7 +4,7 @@
     <%= raw post.content %>
     <div class="words">
       <%= raw textilize post.description %>
-      <p>(<%= link_to "permalink", post %>)</p>
+      <p>(<%= link_to "permalink", revealled_url(post) %>)</p>
     </div>
   </div>
 </article>

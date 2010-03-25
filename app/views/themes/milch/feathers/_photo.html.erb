@@ -1,7 +1,7 @@
 <article>
   <div class="photo">
     <div class="mark">&nbsp;&equiv;</div>
-    <%= link_to image_tag(post.content), post %>
+    <%= link_to image_tag(post.content), revealled_url(post) %>
     <div class="words">
       <%= raw textilize post.description %>
     </div>

@@ -1,7 +1,7 @@
 <article>
   <div class="text">
     <div class="mark">&nbsp;&para;</div>
-    <h2><%= link_to post.title, post %></h2>
+    <h2><%= link_to post.title, revealled_url(post) %></h2>
     <div class="words">
       <%= raw textilize post.content %>
     </div>
