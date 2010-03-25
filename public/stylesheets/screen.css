@@ -20,11 +20,20 @@ a:hover {
   background: #ff6;
 }
 
+#flash,
 header,
 #action-bar,
 section,
 footer {
   padding: 1em 3em;
+}
+
+/* Flash */
+
+#flash {
+  background: #cfc;
+  color: #030;
+  border-bottom: 1px solid #111;
 }
 
 /* Header */

@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
     elsif request.post?
       if user = User.authenticate(params[:session][:email], params[:session][:password])
         self.current_user = user
-        flash[:notice] = 'Hej d&aring;! You logged in successfully.'
+        flash[:notice] = 'Hej! You logged in successfully.'
         redirect_to posts_url
       else
         flash.now[:error] =  "Couldn't locate a user with those credentials"
@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
   
   def destroy
     self.current_user = nil
-    flash[:notice] = "You successfully logged out. Ta-la!"
-    redirect_to root_url
+    flash[:notice] = "You successfully logged out. Hej d&aring;!"
+    redirect_to login_url
   end
 end

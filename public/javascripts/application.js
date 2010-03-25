@@ -19,4 +19,8 @@ $(function() {
   // New posts tabs
   $("#new-post").tabs({ panelTemplate: "<form></form>" });
   
+  if ($("#flash")) {
+    $("#flash").delay(3000).slideUp();
+  }
+  
 });

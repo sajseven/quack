@@ -9,6 +9,10 @@
     <%= stylesheet_link_tag "screen", "juni" %>
   </head>
   <body>
+    <% if flash[:notice] %>
+      <div id="flash"><%= raw flash[:notice] %></div>
+    <% end %>
+    
     <header>
       <h1>Quack: <strong><%= Config.name %></strong></h1>
     </header>

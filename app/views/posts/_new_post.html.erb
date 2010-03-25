@@ -8,7 +8,7 @@
   <% Config.feathers.each do |feather| %>
     <% form_for :post, new_post_path, :html => { :id => "new-post-#{feather}" } do %>
       <%= render :partial => "feathers/#{feather}/form" %>
-      <%= hidden_field :post, :user_id, :value => 1 %>
+      <%= hidden_field :post, :user_id, :value => current_user.id %>
       
       <div class="commit">
         <%= submit_tag "Publish #{feather}", :class => "publish" %> or
