@@ -1,6 +1,6 @@
 class RevealController < ApplicationController
   # require "themes/#{Config.theme}/helper"
-  layout "../themes/#{Config.theme}/layout"
+  layout "../../../themes/#{Config.theme}/layout"
   
   def index
     # @posts = Post.order "created_at desc"
@@ -10,6 +10,6 @@ class RevealController < ApplicationController
   
   def show
     @post = Post.find params[:id]
-    render :layout => "../themes/#{Config.theme}/layout", :template => "themes/#{Config.theme}/post"
+    render :template => "themes/#{Config.theme}/post"
   end
 end

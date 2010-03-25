@@ -1,0 +1,24 @@
+h1. Quack micro-blogging platform
+
+Quack is a simple micro-blogging platform aimed to make creating your own Rails-powered blog simpler than ever. Quack is much simpler than many other blogging platforms out there, and as such doesn't aim to compete with full-blown publishing platforms like Wordpress.
+
+However, Quack is ideal for those just wishing to start a small blog, allowing for various different types of content out of the box, including text, quotes, photos and embedded videos.
+
+h2. Getting started
+
+# Simply clone the Quack repository:
+bc.  @git clone git://github.com/sajseven/quack.git@
+
+# Configure the @config/database.yml@ file as needed, or leave it as is to use the standard SQLite3 databases.
+
+# Migrate the database to fill it with all the standard stuff:
+  bc.  @rake db:migrate@
+
+# Enter the Rails console, and, once that's loaded, run the @User.register@ method to create your first user:
+  bc. rails console
+  User.register
+
+# With that, your site is ready to roll. Run @rails server@ and visit @http://localhost:3000/@.
+  The administration panel can be found at @http://localhost:3000/pages@.
+
+Further configuration can be made in @config/initializers/app_config.rb@. 
