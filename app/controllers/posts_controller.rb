@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_filter :auth
+  
   def index
     @posts = Post.order "updated_at desc"
   end
@@ -30,6 +32,17 @@ class PostsController < ApplicationController
     else
       flash[:notice] = "Post could not be updated."
       render edit_post_path @post
+    end
+  end
+  
+  def destroy
+    @post = Post.find params[:id]
+    if @post.destroy
+      flash[:notice] = "Post was successfully deleted."
+      redirect_to posts_url
+    else
+      flash[:notice] = "Post could not be deleted."
+      redirect_to @post
     end
   end
 end

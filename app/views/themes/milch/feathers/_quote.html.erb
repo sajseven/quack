@@ -1,7 +1,5 @@
-<article>
-  <div class="quote">
-    <div class="mark">&ldquo;</div>
-    <div class="words"><%= raw textilize_without_paragraph post.content %></div>
-    <div class="quoted">&mdash;<%= link_to post.description, revealled_url(post) %></div>
-  </div>
-</article>
+<div class="quote">
+  <div class="mark"><%= post_mark post, "&ldquo;" %></div>
+  <div class="words"><%= raw textilize_without_paragraph post.content %></div>
+  <div class="quoted">&mdash;<%= post.description.to_s == "" ? "Unknown" : post.description %></div>
+</div>

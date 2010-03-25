@@ -2,4 +2,4 @@
   <h2>&ldquo;<%= raw textilize_without_paragraph post.content %>&rdquo;</h2>
 <% end %>
 
-<em>&mdash;<%= post.description %></em>
+<em>&mdash;<%= post.description.to_s == "" ? "Unknown" : post.description %></em>

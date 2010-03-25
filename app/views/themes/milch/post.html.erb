@@ -1,0 +1,7 @@
+<article>
+  <%= render :partial => "themes/#{Config.theme}/feathers/#{@post.feather}", :locals => { :post => @post } %>
+  <div class="meta">
+    <% if @post.url %><strong>Source:</strong> <%= link_to @post.url %><br /><% end %>
+    <strong>Posted:</strong> <%= @post.date %>
+  </div>
+</article>

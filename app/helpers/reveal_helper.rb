@@ -1,5 +1,20 @@
 module RevealHelper
-  def revealled_url(post)
-    reveal_url(:year => post.created_at.year, :month => post.created_at.month, :id => post.id)
+  require "themes/#{Config.theme}/helper"
+  include ThemeHelper
+  
+  def get_style_contents
+    css = get_file_as_string "app/views/themes/#{Config.theme}/style.css"
+    %(<style type="text/css">#{css}</style>).html_safe
   end
+  
+  private
+  
+  def get_file_as_string(filename)
+	  f = File.open(filename, "r")
+		data = ""
+	  f.each_line do |line|
+	    data += line
+	  end
+	  data
+	end
 end

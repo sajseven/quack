@@ -4,8 +4,9 @@
 
 <% @posts.each do |post| %>
   <div class="post-li">
-    <span class="type"><%= post.feather.humanize %>:</span> <%= link_to post.title || post.description, post %>
-    <span class="date"><%= post.created_at.strftime "%h %d, %Y" %></span>
+    <span class="type"><%= post.feather.humanize %>:</span> 
+    <%= render :partial => "feathers/#{post.feather}/list_item", :locals => { :post => post } %>
+    <span class="date"><%= post.created_at.strftime Config.time_format %></span>
   </div>
 <% end %>
 
@@ -15,7 +16,8 @@
 
 <% content_for :actions do %>
   <div id="links">
-    <%= link_to "Create new post", "#", :id => "new-post-show" %>
+    <%= link_to "Create new post", "#", :id => "new-post-show" %> |
+    <%= link_to "Log out", logout_url, :class => "delete", :confirm => "Are you sure?" %>
   </div>
   <%= render :partial => "new_post" %>
 <% end %>

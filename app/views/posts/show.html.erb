@@ -1,8 +1,8 @@
 <%= render :partial => "feathers/#{@post.feather}/show", :locals => { :post => @post } %>
 
 <div class="meta">
-  <%= raw "URL: " + link_to(@post.url) + "<br />" if @post.url %>
-  Published: <%= @post.created_at.strftime "%h %d, %Y at %l:%M %p" %>.
+  <%= raw "URL: " + link_to(@post.url) + "<br />" if @post.url != "" %>
+  Posted: <%= @post.date %>
 </div>
 
 <% content_for :actions do %>

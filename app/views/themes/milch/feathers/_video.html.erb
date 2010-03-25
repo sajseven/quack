@@ -1,10 +1,7 @@
-<article>
-  <div class="video">
-    <div class="mark">&nbsp;&otimes;</div>
-    <%= raw post.content %>
-    <div class="words">
-      <%= raw textilize post.description %>
-      <p>(<%= link_to "permalink", revealled_url(post) %>)</p>
-    </div>
+<div class="video">
+  <div class="mark"><%= post_mark post, "&nbsp;&otimes;" %></div>
+  <%= raw post.content %>
+  <div class="words">
+    <%= raw textilize post.description %>
   </div>
-</article>
+</div>

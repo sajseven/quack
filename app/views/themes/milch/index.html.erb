@@ -1,3 +1,13 @@
 <% @posts.each do |post| %>
-  <%= render :partial => "themes/#{Config.theme}/feathers/#{post.feather}", :locals => { :post => post } %>
+  <article>
+    <%= render :partial => "themes/#{Config.theme}/feathers/#{post.feather}", :locals => { :post => post } %>
+  </article>
 <% end %>
+
+<%= will_paginate @posts, :page_links => false, :previous_label => "&laquo; Newer posts", :next_label => "Older posts &raquo;" %>
+
+<script type="text/javascript" charset="utf-8">
+  $(function() {
+    $("article .mark a").tooltip({showURL:false});
+  });
+</script>

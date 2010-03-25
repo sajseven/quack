@@ -10,7 +10,8 @@ input {
   font: bold 0.8em Helvetica, Arial, sans-serif;
 }
 
-input[type=text] {
+input[type=text],
+input[type=password] {
   font-size: 1.2em;
   font-weight: bold;
   width: 99%;

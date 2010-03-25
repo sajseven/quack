@@ -1,0 +1,19 @@
+<% content_for :title do %>
+  <h2>Log into your account</h2>
+<% end %>
+
+<% form_for :session do |session| %>
+  <%= label :session, :email %>
+  <%= text_field :session, :email %>
+  
+  <%= label :session, :password %>
+  <%= password_field :session, :password %>
+  
+  <div class="commit">
+    <%= submit_tag "Log in" %>
+  </div>
+<% end %>
+
+<% content_for :actions do %>
+  <%= link_to "Back to site", root_url %>
+<% end %>

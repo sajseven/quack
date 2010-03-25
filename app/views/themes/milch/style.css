@@ -1,7 +1,7 @@
 body {
   background: #fff;
   color: #333;
-  font: 1.5em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 1.5em "Helvetica Neue",Helvetica,Arial,sans-serif;
   margin: 2em;
 }
 
@@ -17,7 +17,6 @@ a:hover {
 }
 
 /* Header */
-
 header {
   padding-bottom: 1em;
   border-bottom: 5px solid #ccc;
@@ -35,19 +34,41 @@ header p {
 }
 
 /* Section */
-
 section {}
 
 /* Article */
-
 article {
   padding-bottom: 1em;
   border-bottom: 5px solid #ccc;
   margin-bottom: 1em;
 }
 
-/* Quote */
+article .mark {
+  float: left;
+  font-size: 2em;
+  line-height: 0em;
+  position: relative;
+  top: 0.4em;
+  color: #999;
+  margin-right: 0.2em;
+}
 
+article .mark a {
+  background: none;
+  border: none;
+  color: #999;
+}
+
+article .mark a:hover {
+  color: #000;
+}
+
+article .meta {
+  margin-left: 3em;
+  color: #999;
+}
+
+/* Quote */
 article .quote {}
 
 article .quote .words {
@@ -56,13 +77,7 @@ article .quote .words {
 }
 
 article .quote .mark {
-  float: left;
   font-size: 4.5em;
-  line-height: 0em;
-  position: relative;
-  top: 0.4em;
-  color: #999;
-  margin-right: 0.2em;
 }
 
 article .quote .quoted {
@@ -73,18 +88,8 @@ article .quote .quoted {
 }
 
 /* Text */
-
 article .text {}
-
-article .text .mark {
-  float: left;
-  font-size: 2em;
-  line-height: 0em;
-  position: relative;
-  top: 0.4em;
-  color: #999;
-  margin-right: 0.2em;
-}
+article .text .mark {}
 
 article .text h2 {
   margin: 0;
@@ -96,18 +101,8 @@ article .text .words {
 }
 
 /* Video */
-
 article .video {}
-
-article .video .mark {
-  float: left;
-  font-size: 2em;
-  line-height: 0em;
-  position: relative;
-  top: 0.4em;
-  color: #999;
-  margin-right: 0.2em;
-}
+article .video .mark {}
 
 article .video object {
   font-size: 1em;
@@ -120,18 +115,8 @@ article .video .words {
 }
 
 /* Photo */
-
 article .photo {}
-
-article .photo .mark {
-  float: left;
-  font-size: 2em;
-  line-height: 0em;
-  position: relative;
-  top: 0.4em;
-  color: #999;
-  margin-right: 0.2em;
-}
+article .photo .mark {}
 
 article .photo img {
   font-size: 1em;
@@ -143,9 +128,49 @@ article .photo .words {
   margin-left: 3em;
 }
 
-/* Footer */
+/* Pagination links */
 
+.pagination {
+  border-bottom: 5px solid #ccc;
+  padding-bottom: 1em;
+}
+
+.pagination a,
+.pagination span {
+  padding: 5px;
+  border: 1px solid #ccc;
+  font-weight: bold;
+  color: #333;
+}
+
+.previous_page {}
+
+.next_page {
+  float: right;
+  position: relative;
+  bottom: 5px;
+}
+
+.pagination span {
+  color: #999;
+}
+
+/* Footer */
 footer {
   margin-top: 1em;
   color: #999;
+}
+
+/* jQuery Tooltip */
+#tooltip {
+  position: absolute;
+  z-index: 3000;
+  background-color: #ff0;
+  padding: 0.5em;
+  font-size: 0.8em;
+  color: #000;
+}
+
+#tooltip h3,#tooltip div {
+  margin: 0;
 }

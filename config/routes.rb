@@ -6,11 +6,15 @@ Quack::Application.routes.draw do |map|
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
   match 'archive/:year/:month/:id' => 'reveal#show', :as => :reveal
+  match 'page/:page' => 'reveal#index'
+  
+  match 'login' => 'sessions#new', :as => :login
+  match 'logout' => 'sessions#destroy', :as => :logout
 
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
-  match 'style.css' => 'reveal#css', :as => :css
+  # match 'admin(/:action(/:id))' => "posts"
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
